@@ -16,11 +16,9 @@ class AdminResidencia(admin.ModelAdmin):
 
 @admin.register(Equipo)
 class RegistrarEquipo(admin.ModelAdmin):
-    #list_display = ('destinatario','remitente','estado', 'conserje')
     ordering = ('-modelo',)
     #search_fields = ('destinatario',)
-    #list_editable = ('estado', 'conserje')
-    #list_filter = ('estado',)
+    list_filter = ('estado',)
     #list_per_page = 10
 #admin.site.register(Equipo, RegistrarEquipo)
 
