@@ -16,10 +16,11 @@
 <body>
     <h1>{% block header %} {% endblock %}</h1>
 <!-- As a link -->
+
 <nav class="navbar bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'home' %}">Inicio</a>
-      <a class="navbar-brand" href="{% url 'autenticacion' %}">Ver Informe</a>
+      <a class="navbar-brand" href="{% url 'informe' %}">Ver Informe</a>
       <a class="navbar-brand" href="{% url 'admin:index'%}">Administrador</a>
     </div>
   </nav>
