@@ -20,6 +20,8 @@ from core import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home, name='home'),
+    path('informe',views.informe, name='informe'),
+
 ]
 
 class FlatPageAdmin(admin.ModelAdmin):

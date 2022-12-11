@@ -1,0 +1,51 @@
+{%  extends 'core\base.html' %}
+  {% load static %}
+  {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 style="text-align:center"> <u style="font-size: 30px"> <p style="padding: 25px 20px"> Equipo </p></u></h3>
+                <div class="table-responsive">
+                    <table class = "table table-striped">
+                        <thead>
+                            <tr>
+
+                              <th>Departamento</th>
+                              <th>Fecha mantencion</th>
+                              <th>Matrona</th>
+                              <th>Modelo</th>
+                              <th>Mantencion</th>
+
+                            </tr>
+                        <tbody>
+
+                            {% for c in Equipo %}
+                            <tr>
+
+                              <td>{{c.residencia}} </td>
+                              <td>{{c.fecha_mantencion}} </td>
+                              <td>{{c.matrona}} </td>
+                              <td>{{c.modelo}} </td>
+                              <td>{{c.estado}} </td>
+                            </tr>
+                            {% endfor %}
+
+                        </tbody>
+                        </thead>
+                    </table>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div> 
+
+    
+    </div>
+    
+
+{% endblock %}
+
