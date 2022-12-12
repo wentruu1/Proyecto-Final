@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.timezone import now
 from django.contrib.auth.models import User
+from rest_framework import serializers
 
 DEPARTAMENT_CHOICES = (
     ("UCI", "UCI"),
