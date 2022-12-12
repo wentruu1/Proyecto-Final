@@ -6,7 +6,14 @@ from django.contrib.auth.models import User, Group
 from django.contrib.auth.decorators import login_required,user_passes_test
 from .models import Equipo
 from .models import Residencia
+##### API
+from core.serializers import EquipoSerializer
+from rest_framework.viewsets import ModelViewSet
+from core.models import Equipo
 
+class EquipoApiViewSet(ModelViewSet):
+    serializer_class = EquipoSerializer
+    queryset = Equipo.objects.all()
 
 def home(request):
     return render(request, "core/home.html")
