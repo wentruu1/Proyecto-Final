@@ -39,6 +39,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home, name='home'),
     path('informe',views.informe, name='informe'),
+    path('mapa',views.mapa, name='mapa'),
     path('api/', include(router_posts.urls))
 
 

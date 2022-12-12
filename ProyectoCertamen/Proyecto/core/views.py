@@ -22,6 +22,9 @@ def informe(request):
     EquipoLista = Equipo.objects.all()
     return render(request, "core/informe.html",{"Equipo": EquipoLista})
 
+def mapa(request):
+    return render(request, "core/mapa.html")
+
 
 
 
