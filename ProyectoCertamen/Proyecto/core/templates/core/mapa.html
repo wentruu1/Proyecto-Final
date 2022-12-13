@@ -1,78 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <script src = "{% static 'core/js/jquery.js' %}"></script>
-    <link rel="stylesheet" href="css/bootstrap.css">
-</head>
-<body>
-    <div container = "row">
-        <div class="card" style="width: 18rem;">
-            <img src="img/UF.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h1 class="card-title" id="nombre"></h1>
-              <p class="card-text">        
-
-                <h2 id = "valor"></h2>
-                <h2 id = "fecha"></h2>
-                <h2 id = "codigo"></h2>
-        </p>
-              <a href="https://api.gael.cloud/general/public/monedas/UF" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-
-
-        <div class="card" style="width: 18rem;">
-            <img src="img/dolarf.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"><h2 id = "nombre1"></h5>
-              <p class="card-text">         </h2>
-                <h2 id = "valor1"></h2>
-                <h2 id = "fecha1"></h2>
-                <h2 id = "codigo1"></h2></p>
-              <a href="https://api.gael.cloud/general/public/monedas/USD" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-
-
-    </div>
-    
-        <script>
-            $(document).ready(
-                function(){
-                    var url ="https://api.gael.cloud/general/public/monedas/UF";
-                    var url2 ="https://api.gael.cloud/general/public/monedas/USD";
-
-                    $.getJSON(
-                        url, 
-                        function(data){  
-                            $("#valor").html(data.Valor)
-                            $("#nombre").html(data.Nombre)
-                            $("#fecha").html(data.Fecha)
-                            $("#codigo").html(data.Codigo)
-
-
-                        }
-                    );
-
-                    $.getJSON(
-                        url2, 
-                        function(data){  
-                            $("#valor1").html(data.Valor)
-                            $("#nombre1").html(data.Nombre)
-                            $("#fecha1").html(data.Fecha)
-                            $("#codigo1").html(data.Codigo)
-
-
-                        }
-                    );
-                }
-            )
-
-
-        </script>
-
-<script src = "{% static 'core/js/bootstrap.js' %}"></script>
-</body>
-</html>
+{%  extends 'core\base.html' %}
+{% load static %}
+{% block title %} Mapa {% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'core/css/a.css' %}">
+<script src = "{% static 'core/js/script.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9yjqMVRQLnPxz9k4EG7E46HzLJb_9x5Y&callback=initMap" defer></script>
+<div class = "row">
+    <div class = "col"></div>
+    <div id="map" class = "col"></div>
+    <div class = "col"></div>
+</div>
+{% endblock %}
