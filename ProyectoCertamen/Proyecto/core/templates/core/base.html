@@ -9,12 +9,16 @@
     <title>{% block title %} {% endblock %}</title>
    <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
-   <link rel="stylesheet" href="{% static 'core/css/estilo.css' %}">
+   <link rel="stylesheet" href="{% static 'core/css/a.css' %}">
    
     
 </head>
 <body>
-    <h1>{% block header %} {% endblock %}</h1>
+    <div class = "row">
+    <div class = "col"></div>
+    <div class = "col"><h1>{% block header %} {% endblock %}</h1></div>
+    <div class = "col"></div>
+    </div>
 <!-- As a link -->
 
 <nav class="navbar bg-light">
